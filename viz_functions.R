@@ -3,24 +3,18 @@
 library(dplyr)
 library(plotly)
 
-# Now merge player_stats_data with players_data
-players_combined <- players_data %>%
-  left_join(players_stats_data, by = c("player_id", "team_id")) 
-
-  
-players_combined_match <- matches_data %>%  select(match_id,league_id, season) %>%
-  left_join(players_combined,by = c("match_id"))
-
-final_data <- teams_data %>%
-  left_join(players_combined_match,by = c("team_id"))
-
-
-viz_players <- function(league,xaxis,yaxis, Season, plot_type){
+viz_players <- function(league,xaxis,yaxis, Season, plot_type, outlier){
 
     if (!(Season %in% final_data$season)){
       print('Try an other season')
       stop()
     } 
+    stopifnot(is.numeric(outlier))
+    
+    if(outlier<2){
+      print('Outlier is changed to 2, as the chosen number was to small')
+      outlier=2
+    }
     
 
     # Filtering the data
@@ -29,11 +23,11 @@ viz_players <- function(league,xaxis,yaxis, Season, plot_type){
       group_by(player_id, player_name, team_name) %>% select(-c(league_id))%>% 
       summarize(across(c(where(is.numeric) ),sum)) 
    
-    outlier_u_x <- mean(players[[xaxis]]) + 5 * sd(players[[xaxis]]) # getting extreme outliers
-    outlier_l_x <- mean(players[[xaxis]]) - 5 * sd(players[[xaxis]])
+    outlier_u_x <- mean(players[[xaxis]]) + outlier * sd(players[[xaxis]]) # getting extreme outliers
+    outlier_l_x <- mean(players[[xaxis]]) - outlier * sd(players[[xaxis]])
     
-    outlier_u_y <- mean(players[[yaxis]]) + 5 * sd(players[[yaxis]])
-    outlier_l_y <- mean(players[[yaxis]]) - 5 * sd(players[[yaxis]])
+    outlier_u_y <- mean(players[[yaxis]]) + outlier * sd(players[[yaxis]])
+    outlier_l_y <- mean(players[[yaxis]]) - outlier * sd(players[[yaxis]])
     
     # adding them to the df
     players$outliers <- ifelse(players[[xaxis]]>outlier_u_x |players[[yaxis]]>outlier_u_y |
@@ -69,7 +63,10 @@ Season = '2022/2023'
 league = 5
 yaxis='xG'
 xaxis= 'xAG'
+outlier = 5
 
-viz_players(league,xaxis,yaxis,Season)
+viz_players(league,xaxis,yaxis,Season, outlier)
+
+
 
 
