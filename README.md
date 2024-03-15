@@ -2,14 +2,14 @@
 
 Welcome to Football Viz and Modelling! This repository contains functions for visualizing football data and creating scatter plots.
 
-## Function Overview
+# Function Overview
 
-### scatter_viz_players
+## scatter_viz_players
 
 I've developed a versatile function that generates scatter plots using football data. Simply select the league, variables for the axes, and the season to get started!
 
 
-## How to Use
+### How to Use
 1. **Get Your Football Data**: Obtain your football data with the required variables.
 2. **Choose the League**: Select the league of interest.
 3. **Select Axes Variables**: Choose the variables for the X and Y axes.
@@ -17,7 +17,7 @@ I've developed a versatile function that generates scatter plots using football 
 5. *(Optional)* **Customize Outliers**: Adjust the multiplier value for standard deviation to identify outliers.
    
 
-## Example: Ligue 1 22/23
+### Example: Ligue 1 22/23
 Here's an example from Ligue 1's 2022/2023 season, featuring the variables xG (Expected Goals) and xAG (Expected Assists Goals). 
 
 - The red dots indicate outliers in the data.
