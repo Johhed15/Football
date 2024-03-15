@@ -24,7 +24,7 @@ viz_players <- function(data,league,xaxis,yaxis, Season, plot_type, outlier){
       group_by(player_id, player_name, team_name) %>% select(-c(league_id))%>% 
       summarize(across(c(where(is.numeric) ),sum)) 
    
-    outlier_u_x <- mean(players[[xaxis]]) + outlier * sd(players[[xaxis]]) # getting extreme outliers
+    outlier_u_x <- mean(players[[xaxis]]) + outlier * sd(players[[xaxis]]) # getting outliers
     outlier_l_x <- mean(players[[xaxis]]) - outlier * sd(players[[xaxis]])
     
     outlier_u_y <- mean(players[[yaxis]]) + outlier * sd(players[[yaxis]])
