@@ -4,7 +4,7 @@ Welcome to Football Viz and Modelling! This repository contains functions for vi
 
 ## Function Overview
 
-### Scatter Plot Function
+### scatter_viz_players
 
 I've developed a versatile function that generates scatter plots using football data. Simply select the league, variables for the axes, and the season to get started!
 
