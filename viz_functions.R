@@ -4,7 +4,7 @@ library(dplyr)
 library(plotly)
 
 
-viz_players <- function(data,league,xaxis,yaxis, Season, plot_type, outlier=5){
+scatter_viz_players <- function(data,league,xaxis,yaxis, Season, outlier=5){
 
     if (!(Season %in% data$season)){
       print('Try an other season')
@@ -66,7 +66,7 @@ yaxis='xG'
 xaxis= 'xAG'
 outlier = 5
 
-viz_players(data,league,xaxis,yaxis,Season, outlier)
+scatter_viz_players(data,league,xaxis,yaxis,Season, outlier)
 
 
 
