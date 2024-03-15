@@ -4,7 +4,7 @@ library(dplyr)
 library(plotly)
 
 
-viz_players <- function(data,league,xaxis,yaxis, Season, plot_type, outlier){
+viz_players <- function(data,league,xaxis,yaxis, Season, plot_type, outlier=5){
 
     if (!(Season %in% data$season)){
       print('Try an other season')
