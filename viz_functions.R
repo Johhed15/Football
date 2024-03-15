@@ -3,9 +3,10 @@
 library(dplyr)
 library(plotly)
 
-viz_players <- function(league,xaxis,yaxis, Season, plot_type, outlier){
 
-    if (!(Season %in% final_data$season)){
+viz_players <- function(data,league,xaxis,yaxis, Season, plot_type, outlier){
+
+    if (!(Season %in% data$season)){
       print('Try an other season')
       stop()
     } 
@@ -18,7 +19,7 @@ viz_players <- function(league,xaxis,yaxis, Season, plot_type, outlier){
     
 
     # Filtering the data
-    players <- final_data %>%
+    players <- data %>%
       filter(season == Season, league_id == league) %>%
       group_by(player_id, player_name, team_name) %>% select(-c(league_id))%>% 
       summarize(across(c(where(is.numeric) ),sum)) 
@@ -65,7 +66,7 @@ yaxis='xG'
 xaxis= 'xAG'
 outlier = 5
 
-viz_players(league,xaxis,yaxis,Season, outlier)
+viz_players(data,league,xaxis,yaxis,Season, outlier)
 
 
 
