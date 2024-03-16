@@ -1,6 +1,6 @@
 # Football Viz and Modelling (UNDER WORK)
 
-Welcome to Football Viz and Modelling! This repository contains functions for visualizing football data and creating scatter plots.
+Welcome to Football Viz and Modelling! This repository contains functions for visualizing football data and in the future also for clustering and predictions!
 
 # Function Overview
 
