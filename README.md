@@ -10,7 +10,7 @@ I've developed a versatile function that generates scatter plots using football 
 
 
 ### How to Use
-1. **Get Your Football Data**: Obtain your football data with the required variables.
+1. **Get Your Football Data**: Obtain your football data with the required variables(player_id,player_name,team_name,league_id, season).
 2. **Choose the League**: Select the league of interest.
 3. **Select Axes Variables**: Choose the variables for the X and Y axes.
 4. **Specify the Season**: Define the season you want to analyze.
