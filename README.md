@@ -20,15 +20,14 @@ I've developed a versatile function that generates scatter plots using football 
 ### Example: Ligue 1 22/23
 Here's an example from Ligue 1's 2022/2023 season, featuring the variables xG (Expected Goals) and xAG (Expected Assists Goals). 
 
-- The red dots indicate outliers in the data.
+- The red dots indicate outliers in the data
+- There is hover-over information on all points in the created HTML 
 
 ## Visualization
 
 <div style="text-align:center">
-  <img src="https://github.com/Johhed15/Football/blob/main/test_plot.png" alt="Test Image" width="600" titel='Ligue 1 2022/2023 xG-xAG Scatter Plot'/>
+  <img src="https://github.com/Johhed15/Football/blob/main/test_plot.png" alt="Test Image" width="800" titel='Ligue 1 2022/2023 xG-xAG Scatter Plot'/>
 </div>
-
-
 
 *Note*: README files on GitHub can't display interactive HTML content, so the Plotly image has been saved as a PNG. If you'd like to interact with the plot and explore its functionalities, you can watch the HTML file from the link below:
 
