@@ -27,8 +27,12 @@ Here's an example from Ligue 1's 2022/2023 season, featuring the variables xG (E
 <div style="text-align:center">
   <img src="https://github.com/Johhed15/Football/blob/main/test_plot.png" alt="Test Image" width="600" titel='Ligue 1 2022/2023 xG-xAG Scatter Plot'/>
 </div>
+
+
+
 *Note*: README files on GitHub can't display interactive HTML content, so the Plotly image has been saved as a PNG. If you'd like to interact with the plot and explore its functionalities, you can download the HTML file from the link below:
 
 [Download Ligue 1 2022/2023 xG-xAG Scatter Plot HTML](https://github.com/Johhed15/Football/blob/main/ligue1_22_23_xg_xag.html)
 
-
+Or you can watch it via this link created on Raw.githack.com: 
+[Link to test plot](https://raw.githack.com/Johhed15/Football/main/ligue1_22_23_xg_xag.html)
