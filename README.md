@@ -33,6 +33,6 @@ Here's an example from Ligue 1's 2022/2023 season, featuring the variables xG (E
 
 [Link to Ligue 1 2022/2023 xG-xAG Scatter Plot HTML(Created with Raw.githack.com)](https://raw.githack.com/Johhed15/Football/main/ligue1_22_23_xg_xag.html)
 
-Or download it from this repository:
+Or download it from here:
 
 [Download Ligue 1 2022/2023 xG-xAG Scatter Plot HTML](https://github.com/Johhed15/Football/blob/main/ligue1_22_23_xg_xag.html)
