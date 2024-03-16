@@ -24,7 +24,7 @@ scatter_viz_players <- function(data,league,xaxis,yaxis, Season, outlier=5){
       group_by(player_id, player_name, team_name) %>% select(-c(league_id))%>% 
       summarize(across(c(where(is.numeric) ),sum)) 
    
-    outlier_u_x <- mean(players[[xaxis]]) + outlier * sd(players[[xaxis]]) # getting outliers
+    outlier_u_x <- mean(players[[xaxis]]) + outlier * sd(players[[xaxis]]) # getting extreme outliers
     outlier_l_x <- mean(players[[xaxis]]) - outlier * sd(players[[xaxis]])
     
     outlier_u_y <- mean(players[[yaxis]]) + outlier * sd(players[[yaxis]])
@@ -38,8 +38,9 @@ scatter_viz_players <- function(data,league,xaxis,yaxis, Season, outlier=5){
     }
     # creating the plot
     plot_ly(players, x = ~get(xaxis), y = ~get(yaxis),
-            text = ~paste("Player:",player_name,"<br>",
-              "Team:", team_name, "<br>"),
+            text = ~paste(" Player:",player_name,"<br>",
+              "Team:", team_name, "<br>",
+              "Minutes:",minutes_played),
             type = "scatter", mode = "markers",
             marker=list(color = ~factor(outliers), colorscale='Portland',
                       size = 10, line = list(color = 'white', width = 0.5),
@@ -58,6 +59,7 @@ scatter_viz_players <- function(data,league,xaxis,yaxis, Season, outlier=5){
   
   
 }
+
 
 
 Season = '2022/2023'
