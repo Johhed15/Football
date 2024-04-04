@@ -2,6 +2,8 @@
 
 Welcome to Football Viz and Modelling! This repository contains functions for visualizing football data and in the future also for clustering and predictions!
 
+# Currently working on a clustering function that test which methods cluster your data the best. And a function which print spider(radar) plots for a chosen player and it's n closest neighbours.
+
 # Function Overview
 
 ## scatter_viz_players
